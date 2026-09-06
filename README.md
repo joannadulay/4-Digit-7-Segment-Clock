@@ -1,38 +1,43 @@
-# Arduino Number System Emulator
+# Arduino 4-Digit 7-Segment Clock
 
-A hardware converter built on Arduino that translates manual binary inputs into decimal, hexadecimal, and octal outputs on a seven-segment display in real time.
+A 24-hour digital clock built on Arduino that uses a 4-digit seven-segment display and push buttons for starting and manually adjusting the time.
 
 ## Features
 
-* Real-time conversion across decimal, hexadecimal, and octal bases
-* Direct visual feedback for each bit using individual indicator LEDs
-* Software-based switch debouncing for stable inputs
-* Custom decoding logic to drive single-digit seven-segment displays
+- 24-hour timekeeping with automatic rollover from 23:59 to 00:00
+- Manual hour and minute adjustment using push buttons
+- Two-button activation to start the clock
+- Multiplexed four-digit seven-segment display
+- Millis-based timing for clock operation
+- Internal pull-up configuration for button inputs
 
 ## Components
 
-* Arduino Uno or Nano
-* Seven-segment display
-* 4x Push buttons or DIP switch (4-bit binary input)
-* 4x LEDs (bit indicators)
-* 220Ω and 10kΩ resistors
-* Breadboard and jumper wires
+- Arduino Uno or Nano
+- 4-digit seven-segment display
+- 2x Push buttons
+- Resistors
+- Breadboard and jumper wires
 
 ## Pin Connections
 
-| Function | Arduino Pins |
-| :--- | :--- |
-| Binary Inputs (Bit 0 to Bit 3) | Pins 2, 3, 4, 5 |
-| Mode Selector Switch | Pin 6 |
-| 7-Segment Display (Segments a to g) | Pins 7 to 13 |
+| **Function** | **Arduino Pins** |
+| --- | --- |
+| 7-Segment Display (Segments a to g) | Pins 1 to 7 |
+| Decimal Point (dp) | Pin 8 |
+| Digit Select (Digit 1 to Digit 4) | Pins 12, 11, 10, 9 |
+| Hour Adjustment Button | Pin 13 |
+| Minute Adjustment Button | Pin 0 |
 
 ## Setup
 
 1. Wire the hardware according to the pin connection table.
-2. Open the project sketch in the Arduino IDE.
+2. Open the `experiment3.ino` sketch in the Arduino IDE.
 3. Select your board model and port under Tools.
 4. Click Upload.
+5. Press both buttons to start the clock.
+6. Use the hour and minute buttons to adjust the time.
 
 ## Video Documentation
 
-* [Project Demonstration and Testing Videos](https://drive.google.com/drive/folders/1rS56CuNCL6RDnIjXLNyAOGdweFR4JFa0?usp=sharing)
+- [Project Demonstration and Testing Videos](https://drive.google.com/drive/folders/149qbVmrZvLpSra0fcZM-qeDlKP8Yd-61?usp=sharing)
