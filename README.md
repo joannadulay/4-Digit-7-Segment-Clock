@@ -2,6 +2,10 @@
 
 A 24-hour digital clock built on Arduino that uses a 4-digit seven-segment display and push buttons for starting and manually adjusting the time.
 
+## Prototype
+
+![Arduino 4-Digit 7-Segment Clock Prototype](assets/clock.png)
+
 ## Features
 
 - 24-hour timekeeping with automatic rollover from 23:59 to 00:00
